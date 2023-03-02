@@ -1,0 +1,61 @@
+from mindstorms import MSHub, Motor, MotorPair, ColorSensor, DistanceSensor, App
+from mindstorms.control import wait_for_seconds, wait_until, Timer
+from mindstorms.operator import greater_than, greater_than_or_equal_to, less_than, less_than_or_equal_to, equal_to, not_equal_to
+import math
+
+# Create your objects here.
+hub = MSHub()
+
+# Write your program here.
+hub.speaker.beep()
+# Create your objects here.
+movement_motors = MotorPair(A, B)
+distance_sensor = DistanceSensor(D)
+dist_centimeters = distance_sensor.get_distance_cm()
+lifting_arm = Motor(C)
+
+# Write your program here.
+hub.speaker.beep()
+
+# def right_turn()
+#     hub.motion_sensor.reset_yaw_angle()
+#     while hub.motion_sensor.get_yaw_angle90
+#         movement_motors.start(100)
+#     movement_motors.stop()
+
+
+movement_motors.start_tank(20,0)
+distance_sensor.wait_for_distance_closer_than(60, 'cm', False)
+movement_motors.start(20, 20)
+
+
+
+lifting_arm.run_to_position(94, 'shortest path', 10)
+
+#you can replace shortest path with clockwise or counterclockwise
+
+movement_motors.set_default_speed(20)
+movement_motors.start()
+
+# while True
+#    if color_sensor.get_color=='black'
+#        right_turn()
+#    else
+#        movement_motors.start_tank(20,20)
+
+distance_sensor.wait_for_distance_closer_than(5, 'cm')
+movement_motors.stop()
+lifting_arm.run_to_position(13, 'shortest path', 7)
+
+
+# THIS IS WHAT TO DO AFTER
+#spin tricky around
+#vement_motors.move(20, 'cm', 60)
+
+# right_turn()
+# right_turn()
+
+movement_motors.set_default_speed(-20)
+movement_motors.start()
+wait_for_seconds(3)
+movement_motors.stop()
