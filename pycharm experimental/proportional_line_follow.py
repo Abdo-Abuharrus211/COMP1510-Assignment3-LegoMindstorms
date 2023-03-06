@@ -11,10 +11,10 @@ color_sensor = ColorSensor('E')
 hub.speaker.beep()
 
 # black value
-target_path = 10
+target_path = 35
 # steering const
-prop_const = 2
-movement_speed = set_default_speed(30)
+prop_const = 4
+movement_speed = 75
 
 # infinite loop
 while True:
