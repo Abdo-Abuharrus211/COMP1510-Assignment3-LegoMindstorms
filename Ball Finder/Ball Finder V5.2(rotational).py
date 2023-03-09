@@ -13,12 +13,12 @@ lifting_arm = Motor("C")
 # Write your program here.
 hub.speaker.beep()
 
-lifting_arm.run_to_position(245, 'shortest path', 80)
+lifting_arm.run_to_position(100, 'shortest path', 80)
 
-speed=10
+speed=15
 movement_motors.start(100, speed) #start swipe
-wait_for_seconds(10)
-lifting_arm.run_to_position(0, 'shortest path', 10)
+wait_for_seconds(9)
+lifting_arm.run_to_position(160, 'shortest path', 10)
 
 
 movement_motors.stop()
