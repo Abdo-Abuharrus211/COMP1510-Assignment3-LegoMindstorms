@@ -10,6 +10,6 @@ color_sensor = ColorSensor('E')
 
 hub.speaker.beep()
 
-
+def pathfinder()
 while True:
     movement_motors.start((color_sensor.get_reflected_light()-50)*3, 11)
